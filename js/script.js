@@ -27,3 +27,11 @@ function validateCashAndBillAmount(){
     }
 }
 
+function calculateChange(cashToBeReturned){
+    for(let i =0; i < availableNotes.length; i++){
+        const noOfNotes = Math.trunc(cashToBeReturned/availableNotes[i]);
+        cashToBeReturned%=availableNotes[i];
+        noOfNotesRow[i].innerText = noOfNotes;
+
+    }
+}
