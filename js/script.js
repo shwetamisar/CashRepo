@@ -15,6 +15,7 @@ function validateCashAndBillAmount(){
         if(cashAmt >= billAmt){
             const cashToBeReturned = cashAmt-billAmt;
             calculateChange(cashToBeReturned);
+            message.style.display ="none";
         }
         else{
             message.innerText = "Do you wanna wash plates?"
