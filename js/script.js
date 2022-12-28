@@ -17,8 +17,10 @@ function validateCashAndBillAmount(){
             calculateChange(cashToBeReturned);
             message.style.display ="none";
         }
-        else{
+        else if(cashAmt < billAmount){
             message.innerText = "Do you wanna wash plates?"
+        }else{
+            message.innerText = "Thanks,for shopping with us!"
         }
 
     }
