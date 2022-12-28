@@ -55,5 +55,5 @@ table{
 }
 th{
     font-weight: bold;
-    border: 2px solid  var(--primary-purple);
+    border: 1.5px solid  var(--primary-purple);
 }
