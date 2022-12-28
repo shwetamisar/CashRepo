@@ -12,15 +12,17 @@ function validateCashAndBillAmount(){
     const billAmt = parseInt(billAmount.value);
 
     if(billAmt > 0){
-        if(cashAmt >= billAmt){
-            const cashToBeReturned = cashAmt-billAmt;
+
+        if(cashAmt > billAmt){
+            const cashToBeReturned = cashAmt - billAmt;
             calculateChange(cashToBeReturned);
             message.style.display ="none";
-        }
-        else if(cashAmt < billAmount){
+        }else if(cashAmt < billAmt){
             message.innerText = "Do you wanna wash plates?"
+            message.style.color = "blue";
         }else{
             message.innerText = "Thanks,for shopping with us!"
+            message.style.color = "blue";
         }
 
     }
